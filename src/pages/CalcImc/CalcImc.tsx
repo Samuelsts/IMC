@@ -1,24 +1,25 @@
 
 import { useState } from "react"
-import CompForm from "@/Components/CompForm"
+import CampForm from "@/Components/CampForm"
 import TabelaImc from "@/Components/TabelaImc"
 
-export default function CalcImc(){
-  const [peso,setPeso]=useState<number>(0)
-  const [altura,setAltura]=useState<number>(0)
-  const [imc,setImc]=useState<number>(0)
+export default function CalcImc() {
+  const [peso, setPeso] = useState<number>(0)
+  const [altura, setAltura] = useState<number>(0)
+  const [imc, setImc] = useState<number>(0)
 
-  function calcular(){
-    const res = peso/(altura*altura)
+  function calcular() {
+    const res = peso / (altura * altura)
     setImc(res)
   }
-  return(
-    <div>
-      <CompForm label='peso' state={peso} funcState={setPeso}/>
-      <CompForm label='altura' state={altura} funcState={setAltura}/>
-      <button onClick={calcular}>Calcular</button>
-      <div>Resultado:{imc}</div>
-      <TabelaImc/>
+  return (
+    <div className=" m-auto flex flex-col border border-black w-[300px] gap-5">
+      <p className="w-full text-center bg-zinc-400 font-bold text-lg">Calculo IMC</p>
+      <CampForm label='peso' state={peso} funcState={setPeso} />
+      <CampForm label='altura' state={altura} funcState={setAltura} />
+      <button className="bg-cyan-800 text-white mx-2 rounded-md p-2 cursor-pointer" onClick={calcular}>Calcular</button>
+      <p className="bg-zinc-100 p-1">Resultado:{imc.toFixed(2)}</p>
+      <TabelaImc />
     </div>
   )
 }
