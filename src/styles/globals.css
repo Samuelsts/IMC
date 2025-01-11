@@ -6,3 +6,45 @@
   background-color: chocolate;
   color: white;
 }
+
+.campoForm{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+}
+
+.inputDados{
+  border: 1px solid #000;
+  width: 100%;
+  border-radius: 0.375rem;
+  padding: 0.25rem;
+}
+
+.botaoDados{
+  background-color: #155e75;
+  color: #fff;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.grid{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.gridLinhaTitulos{
+  display: flex;
+  width: 100%;
+}
+
+.gridTitulos{
+  width: 20%;
+}
+
+.gridLinhaDados{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
