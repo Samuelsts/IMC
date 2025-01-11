@@ -2,3 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+.destaque{
+  background-color: chocolate;
+  color: white;
+}
